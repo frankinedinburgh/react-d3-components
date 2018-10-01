@@ -1,22 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import CongressionalState from './App'
 
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
+class CongressionalDistricts extends Component {
   static propTypes = {
-    text: PropTypes.string
+    height: PropTypes.number,
+    width: PropTypes.number,
+    range: PropTypes.number
   }
 
   render() {
-    const {
-      text
-    } = this.props
-
     return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
+      <CongressionalState range={this.props.range} height={this.props.height} width={this.props.width} />
     )
   }
 }
+
+export default CongressionalDistricts
